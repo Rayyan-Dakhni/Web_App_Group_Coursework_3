@@ -149,6 +149,16 @@
           Available Courses
         </h1>
         <br />
+        <div class="w-full text-center block sm:hidden">
+          <input
+            type="search"
+            placeholder="Search..."
+            class="max-w-96 p-2 px-5 rounded-md border"
+            v-model="search"
+          />
+        </div>
+        <br />
+        <br />
         <div class="inline-flex w-full">
           <button
             id="orderByBtn"
@@ -213,7 +223,7 @@
         </div>
         <br />
         <br />
-        <div class="w-full text-center">
+        <div class="w-full text-center hidden sm:block">
           <input
             type="search"
             placeholder="Search..."
