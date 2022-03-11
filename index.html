@@ -125,16 +125,18 @@
           Cart
         </button>
       </div>
-      <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-10 p-20 pt-32">
+      <div
+        class="w-full grid grid-cols-1 sm:grid-cols-2 gap-10 p-10 sm:p-20 pt-32"
+      >
         <div class="inline-flex">
           <img src="images/bg.jpeg" alt="" class="w-full h-auto rounded-lg" />
         </div>
         <div class="w-full font-roboto py-10">
-          <h1 class="text-left font-bold text-4xl max-w-sm">
+          <h1 class="sm:text-left text-center font-bold text-4xl sm:max-w-sm">
             Find All Your Lessons In One Place
           </h1>
           <br />
-          <p class="max-w-md">
+          <p class="sm:text-left text-center max-w-md">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             perspiciatis animi voluptas corporis, numquam facilis id veritatis,
             totam maiores dolor necessitatibus voluptatem ea? Officia dolor
@@ -215,7 +217,7 @@
           <input
             type="search"
             placeholder="Search..."
-            class="w-96 p-2 px-5 rounded-md border"
+            class="max-w-96 p-2 px-5 rounded-md border"
             v-model="search"
           />
         </div>
@@ -226,22 +228,26 @@
             v-if="searchLessonsHasLessons"
             v-for="(l, index) in searchLessons"
             :key="l._id"
-            class="inline-flex w-full border rounded-lg p-3"
+            class="sm:inline-flex w-full border rounded-lg p-3"
           >
-            <img v-bind:src="l.image" alt="subject" class="h-48 w-48" />
+            <img
+              v-bind:src="l.image"
+              alt="subject"
+              class="h-48 w-48 mx-auto sm:ml-auto"
+            />
             <div class="p-2">
               <p class="p-1 text-center">
                 <strong>{{ l.subject }}</strong>
               </p>
-              <p class="p-1">
+              <p class="p-1 sm:text-left text-center">
                 <strong>Location: </strong>
                 {{ l.location }}
               </p>
-              <p class="p-1">
+              <p class="p-1 sm:text-left text-center">
                 <strong>Price: </strong>
                 ${{ l.price }}
               </p>
-              <p class="p-1">
+              <p class="p-1 sm:text-left text-center">
                 <strong>Spaces: </strong>
                 {{ l.spaces }}
               </p>
@@ -266,22 +272,26 @@
             v-if="searchLessonsDoesNotHaveLessons"
             v-for="(l, index) in getLessons"
             :key="l._id"
-            class="inline-flex w-full border rounded-lg p-3"
+            class="sm:inline-flex w-full border rounded-lg p-3"
           >
-            <img v-bind:src="l.image" alt="subject" class="h-48 w-48" />
+            <img
+              v-bind:src="l.image"
+              alt="subject"
+              class="h-48 w-48 mx-auto sm:ml-auto"
+            />
             <div class="p-2">
               <p class="p-1 text-center">
                 <strong>{{ l.subject }}</strong>
               </p>
-              <p class="p-1">
+              <p class="p-1 sm:text-left text-center">
                 <strong>Location: </strong>
                 {{ l.location }}
               </p>
-              <p class="p-1">
+              <p class="p-1 sm:text-left text-center">
                 <strong>Price: </strong>
                 ${{ l.price }}
               </p>
-              <p class="p-1">
+              <p class="p-1 sm:text-left text-center">
                 <strong>Spaces: </strong>
                 {{ l.spaces }}
               </p>
