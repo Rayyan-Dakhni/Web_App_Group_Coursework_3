@@ -1,0 +1,9 @@
+{
+    "name": "After School",
+    "short_name": "School Lessons",
+    "description": "Group Coursework for module Web Based App Development",
+    "icons": [],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "baackground_color": "#f9fafb"
+}
